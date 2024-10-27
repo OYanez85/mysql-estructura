@@ -66,3 +66,68 @@ CREATE TABLE Sales (
     FOREIGN KEY (EmployeeID) REFERENCES Employee(EmployeeID)
 );
 
+SELECT 
+    Sales.SaleID, 
+    Glasses.Brand, 
+    Glasses.Price, 
+    Customer.Name AS CustomerName, 
+    Employee.Name AS EmployeeName, 
+    Sales.SaleDate
+FROM Sales
+JOIN Glasses ON Sales.GlassesID = Glasses.GlassesID
+JOIN Customer ON Sales.CustomerID = Customer.CustomerID
+JOIN Employee ON Sales.EmployeeID = Employee.EmployeeID;
+
+SELECT 
+    c1.Name AS CustomerName, 
+    c2.Name AS ReferredBy 
+FROM Customer c1
+LEFT JOIN Customer c2 ON c1.ReferredByCustomerID = c2.CustomerID;
+
+
+INSERT INTO Supplier (Name, Address_Street, Address_Number, City, PostalCode, Country, Phone, Fax, NIF)
+VALUES ('Best Optics Supply', 'Main Street', '123', 'Barcelona', '08001', 'Spain', '+34 123456789', '+34 987654321', 'B12345678');
+
+
+INSERT INTO Glasses (Brand, Prescription_LeftEye, Prescription_RightEye, FrameType, FrameColor, LensColor_Left, LensColor_Right, Price, SupplierID)
+VALUES ('Ray-Ban', -2.50, -2.00, 'metal', 'black', 'green', 'green', 150.00, 1);
+
+
+
+INSERT INTO Customer (Name, Address_Street, Address_Number, City, PostalCode, Country, Phone, Email, RegistrationDate)
+VALUES ('John Doe', 'Calle Mayor', '5', 'Madrid', '28013', 'Spain', '+34 111222333', 'john.doe@example.com', '2024-10-23');
+
+
+
+INSERT INTO Employee (Name, Phone, Email)
+VALUES ('Alice Smith', '+34 555666777', 'alice.smith@example.com');
+
+
+
+INSERT INTO Sales (GlassesID, CustomerID, EmployeeID, SaleDate)
+VALUES (1, 1, 1, '2024-10-23');
+
+SELECT * FROM Supplier;
+
+SELECT * FROM Glasses;
+
+SELECT * FROM Customer;
+
+SELECT * FROM Employee;
+
+SELECT * FROM Sales;
+
+
+SELECT 
+    Sales.SaleID, 
+    Glasses.Brand, 
+    Glasses.Price, 
+    Customer.Name AS CustomerName, 
+    Employee.Name AS EmployeeName, 
+    Sales.SaleDate
+FROM Sales
+JOIN Glasses ON Sales.GlassesID = Glasses.GlassesID
+JOIN Customer ON Sales.CustomerID = Customer.CustomerID
+JOIN Employee ON Sales.EmployeeID = Employee.EmployeeID;
+
+
