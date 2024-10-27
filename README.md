@@ -107,33 +107,45 @@ To verify database accuracy, execute the following queries:
 ## Optics:
 
 List the total invoices for a customer within a specific period.
+
 List eyeglass models sold by an employee in a given year.
+
 List suppliers who provided glasses that were successfully sold by the store.
+
 
 ## Pizzeria:
 
 List the number of products from the "Beverages" category sold in a specific city.
+
 List the total orders handled by a specific employee.
 
 ## YouTube:
 
 List users who liked a specific video and the date/time of the like.
+
 List public videos posted by a user, including views and tags.
 
 ## Spotify:
 
 List playlists created by a user, including active and deleted playlists.
+
 List total play counts for all songs in an album by a specific artist.
 
 ## SQL Code
 
 Database Creation and Setup
+
 Each application uses a unique schema defined in the SQL code provided. Follow these steps:
 
+
 Set up tables and relationships for each level, including unique keys and foreign key constraints.
+
 Insert sample data to test relationships and query functionality.
+
 
 ## Execution
 
 Execute each level’s database creation script.
+
 Run the verification queries to confirm data accuracy and relational integrity.
+
